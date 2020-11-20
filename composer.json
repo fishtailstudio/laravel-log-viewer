@@ -1,5 +1,5 @@
 {
-    "name": "rap2hpoutre/laravel-log-viewer",
+    "name": "fishtail/laravel-log-viewer",
     "description": "A Laravel log reader",
     "license": "MIT",
     "keywords": ["log", "log-reader", "log-viewer", "logging", "laravel", "lumen"],
@@ -8,6 +8,10 @@
         {
             "name": "rap2hpoutre",
             "email": "raphaelht@gmail.com"
+        },
+        {
+            "name": "wenyu",
+            "email": "wenyutech@foxmail.com"
         }
     ],
     "require": {
