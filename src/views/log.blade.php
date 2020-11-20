@@ -282,12 +282,12 @@
   </div>
 </div>
 <!-- jQuery for Bootstrap -->
-<script src="../vendor/fishtail/laravel-log-viewer/src/assets/fontawesome-5.0.6-all.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 <!-- FontAwesome -->
-<script defer src="../vendor/fishtail/laravel-log-viewer/src/assets/fontawesome-5.0.6-all.min.js"></script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.10.0-6/js/all.min.js"></script>
 <!-- Datatables -->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
