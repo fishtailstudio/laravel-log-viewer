@@ -4,10 +4,12 @@ namespace Rap2hpoutre\LaravelLogViewer;
 
 use Illuminate\Support\Facades\Crypt;
 
-if (class_exists("\\Illuminate\\Routing\\Controller")) {	
-    class BaseController extends \Illuminate\Routing\Controller {}	
-} elseif (class_exists("Laravel\\Lumen\\Routing\\Controller")) {	
-    class BaseController extends \Laravel\Lumen\Routing\Controller {}	
+if (class_exists("\\Illuminate\\Routing\\Controller")) {
+    class BaseController extends \Illuminate\Routing\Controller
+    {}
+} elseif (class_exists("Laravel\\Lumen\\Routing\\Controller")) {
+    class BaseController extends \Laravel\Lumen\Routing\Controller
+    {}
 }
 
 /**
@@ -34,8 +36,9 @@ class LogViewerController extends BaseController
     /**
      * LogViewerController constructor.
      */
-    public function __construct()
+    public function __construct($icon = 'favicon.ico')
     {
+        $this->icon = $icon;
         $this->log_viewer = new LaravelLogViewer();
         $this->request = app('request');
     }
@@ -67,6 +70,7 @@ class LogViewerController extends BaseController
             'files' => $this->log_viewer->getFiles(true),
             'current_file' => $this->log_viewer->getFileName(),
             'standardFormat' => true,
+            'icon' => $this->icon,
         ];
 
         if ($this->request->wantsJson()) {
@@ -103,8 +107,8 @@ class LogViewerController extends BaseController
             return $this->redirect($this->request->url());
         } elseif ($this->request->has('delall')) {
             $files = ($this->log_viewer->getFolderName())
-                        ? $this->log_viewer->getFolderFiles(true)
-                        : $this->log_viewer->getFiles(true);
+            ? $this->log_viewer->getFolderFiles(true)
+            : $this->log_viewer->getFiles(true);
             foreach ($files as $file) {
                 app('files')->delete($this->log_viewer->pathToLogFile($file));
             }
